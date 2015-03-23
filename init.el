@@ -13,7 +13,7 @@
     (package-install pkg)))
 
 (defvar my-packages '(better-defaults
-                      paredit
+                      smartparens
                       idle-highlight-mode
                       ido-ubiquitous
                       find-file-in-project
