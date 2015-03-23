@@ -81,6 +81,10 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; better window movements
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 (load "~/.emacs.d/bk-defuns.el")
 (load "~/.emacs.d/bk-lisp.el")
 (load "~/.emacs.d/clojure.el")
