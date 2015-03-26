@@ -32,7 +32,7 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 ;; Uncomment this to increase font size
 ;; (set-face-attribute 'default nil :height 140)
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; Flyspell often slows down editing so it's turned off
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
@@ -84,6 +84,10 @@
 ;; better window movements
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+
+;;company mode
+(add-hook 'after-init-hook 'global-company-mode)
+(global-set-key (kbd "C-z") 'company-complete)
 
 (load "~/.emacs.d/bk-defuns.el")
 (load "~/.emacs.d/bk-lisp.el")
