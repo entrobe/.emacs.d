@@ -22,7 +22,9 @@
                       scpaste
                       multi-term
                       solarized-theme
-                      company))
+                      company
+                      ace-jump-mode
+                      helm))
 
 (dolist (p my-packages)
   (package-require p))

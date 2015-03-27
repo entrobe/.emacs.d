@@ -19,5 +19,16 @@
 
 (define-key sp-keymap (kbd "M-s") 'sp-unwrap-sexp)
 
+(define-key sp-keymap (kbd "C-M-n") 'sp-next-sexp)
+(define-key sp-keymap (kbd "C-M-p") 'sp-previous-sexp)
+
+(define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp)
+(define-key sp-keymap (kbd "C-M-w") 'sp-copy-sexp)
+
 (sp-pair "(" nil :bind "M-(")
+
 (show-smartparens-global-mode t)
+
+
+
+

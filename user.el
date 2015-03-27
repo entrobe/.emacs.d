@@ -1,5 +1,8 @@
 ;; This is where your customizations should live
 
+;; user super key as meta
+;; (setq x-super-keysym 'meta)
+
 ;; fix the PATH variable for GUI launcher
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
@@ -32,7 +35,7 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 ;; Uncomment this to increase font size
 ;; (set-face-attribute 'default nil :height 140)
-(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; Flyspell often slows down editing so it's turned off
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
@@ -88,6 +91,17 @@
 ;;company mode
 (add-hook 'after-init-hook 'global-company-mode)
 (global-set-key (kbd "C-z") 'company-complete)
+
+;;ace-jump-mode
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+(define-key global-map (kbd "C-;") 'ace-jump-mode)
+
+;;helm
+(global-set-key (kbd "C-M-z") 'helm-mini)
 
 (load "~/.emacs.d/bk-defuns.el")
 (load "~/.emacs.d/bk-lisp.el")
