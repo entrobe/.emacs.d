@@ -24,6 +24,8 @@
                       solarized-theme
                       company
                       ace-jump-mode
+                      yasnippet
+                      popup
                       helm))
 
 (dolist (p my-packages)

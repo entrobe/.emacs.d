@@ -103,6 +103,8 @@
 ;;helm
 (global-set-key (kbd "C-M-z") 'helm-mini)
 
+(load "~/.emacs.d/bk-snippets.el")
+(load "~/.emacs.d/bk-codestyle.el")
 (load "~/.emacs.d/bk-defuns.el")
 (load "~/.emacs.d/bk-lisp.el")
 (load "~/.emacs.d/clojure.el")
