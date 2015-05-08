@@ -103,9 +103,16 @@
 ;;helm
 (global-set-key (kbd "C-M-z") 'helm-mini)
 
+;;disable yas in term mode
+(add-hook 'term-mode-hook (lambda () (yas-minor-mode -1)))
+
+;;projectile
+(projectile-global-mode)
+
 (load "~/.emacs.d/bk-snippets.el")
 (load "~/.emacs.d/bk-codestyle.el")
 (load "~/.emacs.d/bk-defuns.el")
 (load "~/.emacs.d/bk-lisp.el")
 (load "~/.emacs.d/clojure.el")
 (load "~/.emacs.d/js.el")
+(load "~/.emacs.d/elixir.el")

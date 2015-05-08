@@ -26,6 +26,8 @@
                       ace-jump-mode
                       yasnippet
                       popup
+                      projectile
+                      elixir-mode
                       helm))
 
 (dolist (p my-packages)
