@@ -1,3 +1,6 @@
+(package-require 'elixir-mode)
+(package-require 'alchemy)
+
 (sp-with-modes '(elixir-mode)
   (sp-local-pair "fn" "end"
          :when '(("SPC" "RET"))

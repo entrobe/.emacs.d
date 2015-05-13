@@ -4,6 +4,9 @@
 ;; Always newline-and-indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+;; shell scripts
+(setq-default sh-basic-offset 2)
+(setq-default sh-indentation 2)
 ;; Default indentation
 (setq-default tab-width 4)
 ;; Javascript
@@ -19,10 +22,11 @@
 (setq-default py-indent-offset 2)
 ;; XML
 (setq-default nxml-child-indent 2)
-
 ;; Default formatting style for C based modes
 (setq c-default-style "java")
 (setq-default c-basic-offset 2)
 
 ;; I mean, _seriously_...
 (setq sentence-end-double-space nil)
+
+(provide 'bk-codestyle)
