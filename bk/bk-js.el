@@ -28,4 +28,4 @@
               (flycheck-select-checker 'jsxhint-checker)
               (flycheck-mode))))
 
-
+(provide 'bk-js)

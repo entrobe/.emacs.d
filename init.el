@@ -43,14 +43,14 @@
         bk-ido
         bk-lisp
         bk-clojure
-        bk-jsp
+        bk-js
         bk-elixir))
 
 ;; Now load other things
 (dolist (file bk-pkgs)
   (require file))
 
-(load "~/.emacs.d/user.el")
+(load "~/.emacs.d/bk/bk-user.el")
 
 (defvar my-packages '( idle-highlight-mode
                       find-file-in-project
@@ -62,8 +62,8 @@
                       projectile
                       helm))
 
-(dolist my-packages
-  (package-require))
+(dolist (package my-packages)
+  (package-require package))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

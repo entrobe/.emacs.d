@@ -6,3 +6,5 @@
     (package-install p)))
 
 (eval-after-load "clojure-mode" '(require 'cider))
+
+(provide 'bk-clojure)
