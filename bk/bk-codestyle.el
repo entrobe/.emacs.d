@@ -1,3 +1,11 @@
+;; Themes
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'load-path "~/.emacs.d/themes")
+;;(load-theme 'solarized-dark t)
+
+;; No splash screen please ... jeez
+(setq inhibit-startup-message t)
+
 ;; Tab indentation is a disease; a cancer of this planet.
 (set-default 'indent-tabs-mode nil)
 

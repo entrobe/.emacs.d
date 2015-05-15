@@ -39,8 +39,12 @@
 (setq bk-pkgs
       '(bk-defuns
         bk-codestyle
+        bk-nav
         bk-snippets
         bk-ido
+        bk-magit
+        bk-helm
+        bk-projectile
         bk-lisp
         bk-clojure
         bk-js
@@ -50,21 +54,15 @@
 (dolist (file bk-pkgs)
   (require file))
 
-(load "~/.emacs.d/bk/bk-user.el")
+;; fix the PATH variable for GUI launcher
+;; (defun set-exec-path-from-shell-PATH ()
+;;   (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
+;;     (setenv "PATH" path-from-shell)
+;;     (setq exec-path (split-string path-from-shell path-separator))))
 
-(defvar my-packages '( idle-highlight-mode
-                      find-file-in-project
-                      magit
-                      scpaste
-                      solarized-theme
-                      ace-jump-mode
-                      popup
-                      projectile
-                      helm))
+;; (when window-system (set-exec-path-from-shell-PATH))
 
-(dolist (package my-packages)
-  (package-require package))
-
+;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 20) (height . 20)))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
