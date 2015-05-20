@@ -17,6 +17,9 @@
  kept-old-versions 2
  version-control t)
 
+;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (require 'package)
 (dolist (source '(("melpa" . "http://melpa.org/packages/")
                   ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -48,6 +51,7 @@
         bk-lisp
         bk-clojure
         bk-js
+        bk-ruby
         bk-elixir))
 
 ;; Now load other things
