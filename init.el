@@ -9,6 +9,8 @@
 
 ;; backup file settings
 (setq
+ auto-save-file-name-transforms
+ `((".*" ,"~/.saves" t))
  backup-by-copying t      ; don't clobber symlinks
  backup-directory-alist
  '(("." . "~/.saves"))    ; don't litter my fs tree
@@ -16,6 +18,9 @@
  kept-new-versions 6
  kept-old-versions 2
  version-control t)
+
+;; those lock files are so annoying
+(setq create-lockfiles nil)
 
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -46,6 +51,7 @@
         bk-snippets
         bk-ido
         bk-magit
+        bk-company
         bk-helm
         bk-projectile
         bk-lisp

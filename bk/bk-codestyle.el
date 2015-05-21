@@ -37,4 +37,11 @@
 ;; I mean, _seriously_...
 (setq sentence-end-double-space nil)
 
+;; slim mode
+(package-require 'slim-mode)
+(require 'slim-mode)
+;; feature mode
+(package-require 'feature-mode)
+(require 'feature-mode)
+
 (provide 'bk-codestyle)
