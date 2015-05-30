@@ -52,6 +52,7 @@
         bk-ido
         bk-magit
         bk-company
+        bk-markdown
         bk-helm
         bk-projectile
         bk-lisp
